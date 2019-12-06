@@ -1,0 +1,117 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta charset = "utf-8" />
+	<link rel="stylesheet" type="text/css" href="Estilo.css"/>
+	<title>Projeto A.M.D.</title>
+</head>
+
+<body >
+	
+
+	<div id="principal">
+		<header>
+			<h1>UniFBV - Wyden</h1>
+			<h2>Projeto de Análise e Monitoramento de Desempenho</h2>
+		</header>
+			
+	</div>
+	<button id="iniciar" onclick="reiniciar(),contagem(), salvarHoraInicial(), criaFila(), exibeFila(), addCliente(), exibeAtendidos(),calculaMediaSistema(),calculaMediaAtendimento(), calculaMediaFila()">Iniciar Sistema</button>
+	<button id="reiniciar" onclick="stopAll()">Parar Sistema</button>
+	
+	<section id = "sec">
+		<section id = "quadroinfo">
+			<div id = "tempoFilaDiv" ></div>
+			<div id = "tempoAtendimentoDiv"></div> 
+			<div id = "clienteAtendido1">
+				<h3>Info fila 1</h3>
+				 <div class="divinfo"><h4>Cliente:</h4><h4 class = "info" id="clienteAtual1"></h4> </div>
+				 <div class="divinfo"><h4>Tempo fila:</h4><h4 class = "info" id = "tempoFila1"></h4></div> 
+				 <div class="divinfo"><h4>Atendimento do cliente:</h4><h4 class = "info" id="tempoFilaCliente1"></h4></div> 
+				 <div class="divinfo"><h4>Tempo atendimento:</h4><h4 class = "info" id = "tempoAtendimento1"> </h4> </div> 
+				 
+			</div>
+			<div id = "clienteAtendido2">
+					<h3>Info fila 2</h3>
+					<div class="divinfo"><h4>Cliente:</h4><h4 class = "info" id="clienteAtual2"></h4> </div>
+					<div class="divinfo"><h4>Tempo fila:</h4><h4 class = "info" id = "tempoFila2"></h4></div> 
+					<div class="divinfo"><h4>Atendimento do cliente:</h4><h4 class = "info" id="tempoFilaCliente2"></h4></div> 
+					<div class="divinfo"><h4>Tempo atendimento:</h4><h4 class = "info" id = "tempoAtendimento2"> </h4> </div> 
+				
+			</div>
+			<div id = "clienteAtendido3">
+					<h3>Info fila 3</h3>
+					<div class="divinfo"><h4>Cliente:</h4><h4 class = "info" id="clienteAtual3"></h4> </div>
+					<div class="divinfo"><h4>Tempo fila:</h4><h4 class = "info" id = "tempoFila3"></h4></div> 
+					<div class="divinfo"><h4>Atendimento do cliente:</h4><h4 class = "info" id="tempoFilaCliente3"></h4></div> 
+					<div class="divinfo"><h4>Tempo atendimento:</h4><h4 class = "info" id = "tempoAtendimento3"> </h4> </div> 
+
+			</div>
+			<div id = "clienteAtendido4">
+					<h3>Info fila 4</h3>
+					<div class="divinfo"><h4>Cliente:</h4><h4 class = "info" id="clienteAtual4"></h4> </div>
+					<div class="divinfo"><h4>Tempo fila:</h4><h4 class = "info" id = "tempoFila4"></h4></div> 
+					<div class="divinfo"><h4>Atendimento do cliente:</h4><h4 class = "info" id="tempoFilaCliente4"></h4></div> 
+					<div class="divinfo"><h4>Tempo atendimento:</h4><h4 class = "info" id = "tempoAtendimento4"> </h4> </div> 
+				
+			</div>
+			<div id = "clienteAtendido5">
+					<h3>Info fila 5</h3>
+					<div class="divinfo"><h4>Cliente:</h4><h4 class = "info" id="clienteAtual5"></h4> </div>
+					<div class="divinfo"><h4>Tempo fila:</h4><h4 class = "info" id = "tempoFila5"></h4></div> 
+					<div class="divinfo"><h4>Atendimento do cliente:</h4><h4 class = "info" id="tempoFilaCliente5"></h4></div> 
+					<div class="divinfo"><h4>Tempo atendimento:</h4><h4 class = "info" id = "tempoAtendimento5"> </h4> </div> 
+
+			</div>
+
+		</section>
+		<section>
+			<div>
+				<label for="numero">Digite o número de filas: </label>
+				<input type="number" id = "numero" min = "2" value = "2" max = "5"/>
+				<input type="submit" for="numero" value="Ok" onclick = "criaFila()">
+			</div>
+
+			<div id="filasatendimento">
+				<div id="mostrafila1">
+					<h2>Fila de espera 1</h2>
+					<div id = "mostraFila1" class="quadros">	</div>
+				</div>	
+				<div id="mostrafila2">	
+					<h2>Fila de espera 2</h2>
+					<div id = "mostraFila2" class="quadros">	</div>
+				</div>
+				<div id="mostrafila3" class="quadrosamais">
+					<h2>Fila de espera 3</h2>
+					<div id = "mostraFila3" class="quadros">	</div>
+				</div>	
+				<div id="mostrafila4" class="quadrosamais">
+					<h2>Fila de espera 4</h2>
+					<div id = "mostraFila4" class="quadros">	</div>
+				</div>
+				<div id="mostrafila5" class="quadrosamais">
+					<h2>Fila de espera 5</h2>
+					<div id = "mostraFila5" class="quadros">	</div>
+				</div>	
+			</div>
+			<div>
+				<h3>Clientes atendidos</h3>
+				<div id = "mostraAtendidos" class="quadros2"></div>
+			</div>
+		</section>
+		<section>
+			<div id = "clienteAtendido">
+					<div class="divinfo"><h4>Cronômetro:</h4><h4 class = "info" id="cronometro" ></h4> </div>
+					<div class="divinfo"><h4>Tempo médio fila:</h4><h4 class = "info" id="tempoMedioFila" ></h4> </div>
+					<div class="divinfo"><h4>Tempo médio atendimento:</h4><h4 class = "info" id="tempoMedioAtendimento"></h4></div> 
+					<div class="divinfo"><h4>Tempo médio sistema:</h4><h4 class = "info"  id="tempoMedioSistema"></h4></div> 
+					<div class="divinfo"><h4>Clientes por minuto no sistema:</h4><h4 class = "info" id="tempoTotalSistema" ></h4> </div>
+					<div class="divinfo"><h4>Clientes por minuto na fila:</h4><h4 class = "info" id="MediaDeClientesFila" ></h4> </div>
+				</div>
+		</section>
+	</section>
+
+	<script language="javascript" src="javascript2.js"> </script>
+</body>
+</html>

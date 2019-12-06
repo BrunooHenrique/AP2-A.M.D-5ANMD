@@ -1,0 +1,159 @@
+body{
+	font-family: POORICH;
+	background: #343a40;
+	color: white;
+}
+
+
+#principal{
+	width: 960px;
+	margin: auto;
+	background: #6c757d;
+	padding: 10px 20px;
+}
+
+body nav ul li{
+	list-style: none;
+}
+
+#iniciar{
+	font-family: arial;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	background: #216AF2;
+	color: white;
+	box-shadow: 5px 5px 5px #060101;
+	margin-left: 40%;
+
+}
+
+#iniciar:hover{
+	background: #02E1F6;
+	box-shadow: 5px 5px 5px #060101;
+
+}
+
+#iniciar:active{
+	position: relative;
+	top: 1px;
+	box-shadow: none;
+
+}
+
+#reiniciar{
+	font-family: arial;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: 700;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+	background: #C02D2F;
+	color: white;
+	box-shadow: 5px 5px 5px #060101;
+	margin-right:  30%;
+}
+
+#reiniciar:hover{
+	background: #F9070B;
+	box-shadow: 5px 5px 5px #060101;
+
+}
+
+#reiniciar:active{
+	position: relative;
+	top: 1px;
+	box-shadow: none;
+
+}
+
+
+
+
+
+h4{
+	display: flex;
+	background: gray;
+	
+	width: 100px;
+	margin: 0;
+	padding-left: 5px;
+	align-items: center;
+	
+
+}
+
+.info{
+	margin:0;
+	justify-content: center;
+
+}
+
+#sec{
+	margin: 100px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.quadros{
+	display: flex;
+	flex-direction: row;
+	width: 130px;
+	min-height: 18vw;
+	height: auto;
+	margin: 5px;
+	margin-top: 5px;
+	border-radius: 10px;
+	border-color: #060101;
+	border-width: 5px;
+	border-style: solid;
+	background: #6c757d;
+
+}
+.quadros2{
+	display: flex;
+	flex-direction: row;
+	width: 50vw;
+	min-height: 18vw;
+	height: auto;
+	margin-top: 5px;
+	border-radius: 10px;
+	border-color: #060101;
+	border-width: 5px;
+	border-style: solid;
+	background: #6c757d;
+
+}
+#quadroinfo{
+	display: flex;
+	flex-direction: column;
+	
+	
+}
+.divinfo{
+	display: flex;
+	flex-direction: row;
+	margin-top: 5px;
+	border-radius: 10px;
+	border-color: #060101;
+	border-width: 5px;
+	border-style: solid;
+	min-height: 25px;
+	background: #6c757d;
+}
+
+#filasatendimento{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	
+}
+
+h2{
+	font-size: 20px;
+}
